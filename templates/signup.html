@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>   </h1>
+    <h2>   </h2>
+    <div class="container">
+        <div class="row">
+          <div class="col-1">
+            
+          </div>
+          <div class="col-10">
+            <div class="col-lg-5 shadow mx-auto p-0" style="background-color: antiquewhite;">
+                <div class="alert alert-success">CREATE ACCOUNT</div>
+                <div class="p-4">
+                    <form method="POST" action="/signup/">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <hr>
+                        <input class="btn btn-success" type="submit" value="Create Account">
+                       </form>
+                </div>
+            </div>
+          </div>
+          <div class="col-1">
+            
+          </div>
+        </div>
+      </div>
+   
+{% endblock %}

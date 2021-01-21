@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>   </h1>
+    <h2>   </h2>
+    <div class="container">
+        <div class="row">
+          <div class="col-1">
+            
+          </div>
+          <div class="col-10">
+            <div class="col-lg-5 shadow mx-auto p-0" style="background-color: antiquewhite;position:relative;top:20%">
+                <div class="alert alert-success">USER AUTHENTICATION</div>
+                <div class="p-4">
+                    <form method="POST" action="/login/">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <hr>
+                        <input class="btn btn-success" type="submit" style="text-align: center;" value="Login">
+                        <hr>
+                           
+                       </form>
+                       <div>
+                        <a class="nav-link" href="/signup"><b>NEW HERE?SIGN UP</b></a>
+                      </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-1">
+            
+          </div>
+        </div>
+      </div>
+   
+{% endblock %}
